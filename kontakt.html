@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <title>Kontakt — Argjendari Franci, Tiranë</title>
+  <meta name="description" content="Vizitoni atelierin e Argjendarit Franci në Tiranë. Adresa, orari i hapjes, telefoni dhe forma e kontaktit." />
+  <link rel="icon" href="/images/brand/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="nav__brand" aria-label="Argjendari Franci">
+      <span class="mono">F</span>
+      <span class="wordmark">Argjendari · Franci</span>
+    </a>
+    <button class="nav__toggle" aria-label="Hap menynë"><span></span><span></span><span></span></button>
+    <nav>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Kryefaqja</a></li>
+        <li><a href="koleksione.html" class="nav__link">Koleksione</a></li>
+        <li><a href="rreth-nesh.html" class="nav__link">Rreth Nesh</a></li>
+        <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+        <li><a href="https://wa.me/355684447744" target="_blank" rel="noopener" class="nav__cta">WhatsApp</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =========== PAGE HEAD =========== -->
+  <section class="pageHead shell">
+    <span class="eyebrow centered flank" data-reveal>Atelieri ynë</span>
+    <h1 data-reveal data-delay="1">Tiranë.</h1>
+    <p data-reveal data-delay="2">Na vizitoni në qendër të qytetit. Mirëpresim takime të rezervuara dhe bisedat pa lajmërim.</p>
+  </section>
+
+  <!-- =========== CONTACT GRID =========== -->
+  <section class="shell">
+    <div class="contact-grid">
+
+      <div class="contact__info" data-reveal>
+
+        <dl class="info-row">
+          <dt>Adresa</dt>
+          <dd>
+            Argjendari Franci<br/>
+            Tiranë, Shqipëri<br/>
+            <a href="https://maps.app.goo.gl/e4jdUZs1fVFmz9yr6" target="_blank" rel="noopener"
+               style="font-size: 0.78rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 0.2rem; display: inline-block; margin-top: 0.5rem;">
+              Hape në Google Maps →
+            </a>
+          </dd>
+        </dl>
+
+        <dl class="info-row">
+          <dt>Telefon</dt>
+          <dd>
+            <a href="tel:+355684447744">+355 68 444 7744</a>
+          </dd>
+        </dl>
+
+        <dl class="info-row">
+          <dt>WhatsApp</dt>
+          <dd><a href="https://wa.me/355684447744" target="_blank" rel="noopener">+355 68 444 7744</a></dd>
+        </dl>
+
+        <dl class="info-row">
+          <dt>Email</dt>
+          <dd><a href="mailto:franci@argjendari.al">franci@argjendari.al</a></dd>
+        </dl>
+
+        <dl class="info-row">
+          <dt>Orari</dt>
+          <dd class="contact__hours">
+            <strong>E hënë — e premte</strong> · 09:30 — 19:30<br/>
+            <strong>E shtunë</strong> · 10:00 — 17:00<br/>
+            <strong>E diel</strong> · me takim
+          </dd>
+        </dl>
+
+        <form class="contact-form" data-reveal data-delay="2" onsubmit="event.preventDefault(); alert('Faleminderit. Do t\\'ju kthejmë përgjigje brenda 24 orëve.'); this.reset();">
+          <h4 style="font-family: var(--sans); font-size: 0.66rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.5rem;">Ose na shkruani</h4>
+          <input type="text" placeholder="Emri juaj" required />
+          <input type="email" placeholder="Email" required />
+          <input type="text" placeholder="Pjesa që ju intereson (opsional)" />
+          <textarea placeholder="Mesazhi juaj"></textarea>
+          <button type="submit" class="btn btn--ghost" style="justify-self: start;">Dërgo Mesazhin <span class="arrow">→</span></button>
+        </form>
+      </div>
+
+      <div class="map-wrap" data-reveal data-delay="1">
+        <iframe
+          src="https://maps.google.com/maps?q=41.339503,19.827991&hl=sq&z=17&output=embed"
+          title="Argjendari Franci — Tiranë"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========== CTA =========== -->
+  <section class="visit">
+    <div class="shell">
+      <span class="eyebrow centered flank" data-reveal>Mirëpritja</span>
+      <h2 data-reveal data-delay="1" style="margin-top: 1.5rem;">Një kafe, një copë ar, një bisedë.</h2>
+      <p data-reveal data-delay="2">Asnjë vizitë nuk është e vogël. Mund të vini thjesht për të parë — ne nuk shesim me presion, kurrë.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="crest">𝓕</div>
+          <div class="word">Argjendari Franci</div>
+          <p>Shtëpia e argjendarisë në Tiranë. Punim me dorë, që nga viti 1992.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Shtëpia</h4>
+          <ul>
+            <li><a href="index.html">Kryefaqja</a></li>
+            <li><a href="koleksione.html">Koleksione</a></li>
+            <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Koleksionet</h4>
+          <ul>
+            <li><a href="koleksione.html#vargje">Vargje</a></li>
+            <li><a href="koleksione.html#unaza">Unaza</a></li>
+            <li><a href="koleksione.html#byzylyke">Byzylykë</a></li>
+            <li><a href="koleksione.html#vathe">Vathë</a></li>
+            <li><a href="koleksione.html#shpirteror">Trashëgimi shpirtërore</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="tel:+355684447744">+355 68 444 7744</a></li>
+            <li><a href="https://wa.me/355684447744" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:franci@argjendari.al">franci@argjendari.al</a></li>
+            <li><a href="https://www.instagram.com/argjendari.franci?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year></span> Argjendari Franci. Të gjitha të drejtat e rezervuara.</span>
+        <span>Tiranë · Shqipëri</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>
