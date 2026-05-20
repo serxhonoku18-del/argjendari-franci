@@ -1,5 +1,52 @@
 import '../styles/main.css';
 
+/* -------- Hero video: bulletproof iOS/mobile playback -------- */
+const heroVideo = document.querySelector('.hero__video');
+if (heroVideo) {
+  const tryPlay = () => {
+    const p = heroVideo.play();
+    if (p && typeof p.catch === 'function') p.catch(() => {});
+  };
+
+  // Force restart when video ends (iOS Safari `loop` attribute is unreliable)
+  heroVideo.addEventListener('ended', () => {
+    heroVideo.currentTime = 0;
+    tryPlay();
+  });
+
+  // If video pauses for any reason (scroll-out, tab switch, iOS quirk), resume
+  heroVideo.addEventListener('pause', () => {
+    if (!heroVideo.ended && !document.hidden) {
+      setTimeout(tryPlay, 50);
+    }
+  });
+
+  // Resume when tab becomes visible again
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && heroVideo.paused) tryPlay();
+  });
+
+  // Resume when scrolled back into view (iOS pauses off-screen videos)
+  if ('IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && heroVideo.paused) tryPlay();
+      });
+    }, { threshold: 0.05 });
+    heroObserver.observe(heroVideo);
+  }
+
+  // Initial play attempt + fallback for autoplay-blocked browsers
+  tryPlay();
+  const unlockOnInteraction = () => {
+    tryPlay();
+    document.removeEventListener('touchstart', unlockOnInteraction);
+    document.removeEventListener('click', unlockOnInteraction);
+  };
+  document.addEventListener('touchstart', unlockOnInteraction, { once: true, passive: true });
+  document.addEventListener('click', unlockOnInteraction, { once: true });
+}
+
 /* -------- Nav: scroll state + mobile toggle -------- */
 const nav = document.querySelector('.nav');
 const toggle = document.querySelector('.nav__toggle');
